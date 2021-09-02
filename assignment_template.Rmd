@@ -71,7 +71,8 @@ w<-(1/n^i)
 
 cumsum(w)
 
-plot(w)
+plot(w, xlab = "i", ylab = "w")
+
 
 title ("Jose Gonzalo Morones Intriago")
 
