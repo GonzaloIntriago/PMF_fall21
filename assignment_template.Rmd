@@ -25,9 +25,7 @@ link-citations: yes
 citation_package: natbib
 ---
 
-```{=tex}
 \hypersetup{linkcolor=blue}
-```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE) # By default, show code; set to FALSE to hide it
@@ -60,14 +58,25 @@ This equation can be referenced as follows: Eq. \ref{eq:eq1}. Now a simpler equa
 w=\sum^{20}_{i=1}[1/n^i]
 \end{equation}
 ```
-
 This equation can be referenced as Eq. \ref{eq:eq2}.
 
-We can also write equations within the main text as here: $w=\sum^{20}_{i=1}[1/n^i]$.
-\
+We can also write equations within the main text as here: $w=\sum^{20}_{i=1}[1/n^i]$.\
 
 **PMF group 3:00pm.** Assume $n=0.9$, plot the values of $w$ (y-axis) as a function of $i$ (x-axis). Add your name as the plot title. Report your code in a code chunk below. Hint: you need to use the `cumsum()` function.
 
+```{r}
+n<-0.9
+i<-(1:20)
+w<-(1/n^i)
+
+cumsum(w)
+
+plot(w)
+
+title ("Jose Gonzalo Morones Intriago")
+
+
+```
 
 ## A subsection.
 
@@ -147,7 +156,7 @@ Diego Valdés Contreras - Hola:)
 
 María Fernanda Rendón Muro
 
-Eugenio Murillo Nader - Hola grupo! 
+Eugenio Murillo Nader - Hola grupo!
 
 Adriana Beatriz Santos Monterroza
 
@@ -183,16 +192,15 @@ Karina Albarrán Herrera - Hola a todos, buen inicio de semestre.
 
 César Jacob Linares Murguia
 
-Edgar Fernández Reynaga - Hola a todos. 
+Edgar Fernández Reynaga - Hola a todos.
 
 Marianne Obele Coll
 
 Emilio Noriega González - Saludos a todo el grupo....
 
-Allan Alvarado Lozano - Saludos desde Guadalajara 
+Allan Alvarado Lozano - Saludos desde Guadalajara
 
 Lara Hanna Weitgasser - Hola a todos y todas!
-
 
 ## Grupo 6:00pm.
 
@@ -252,7 +260,6 @@ David Villard Linares
 
 Eyleen Lizeth López Cueva-Saludos desde Perú
 
-
 ## Task.
 
 Use R code to numerically demonstrate whether the following equation is true:
@@ -262,7 +269,6 @@ Use R code to numerically demonstrate whether the following equation is true:
 ln(e)+(sin^2x+cos^2x) > \sum^{\infty}_{n=0}1/2^n
 \end{equation}
 ```
-
 Write your R code and results here, below the equation \ref{eq:eq3} and before the conclusion. Please include your name.
 
 ### Diana Jacquelinne Soto Alcaraz A00227348.
@@ -298,7 +304,6 @@ if(is.it.true == FALSE) {print("Equation is false!")}
 
 **PMF group 6:00pm.** Plot $y=log(x)$, where $x=0.1, 0.2, 0.3,...,5$. Add your name as the plot title. Report your code in a code chunk below.
 
-
 # Conclusion.
 
 You can cross-reference sections and subsections as follows: Section \ref{methodology.} and Section \ref{a-subsection.}.
@@ -306,4 +311,3 @@ You can cross-reference sections and subsections as follows: Section \ref{method
 ***Note:*** the last section in the document will be used as the section title for the bibliography.
 
 # References.
-
